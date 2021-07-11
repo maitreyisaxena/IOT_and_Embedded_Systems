@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Led Control</title>
+    <style>
+        .ON {
+            height: 50px;
+            width: 50px;
+            background-color: #f80707;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .OFF {
+            height: 50px;
+            width: 50px;
+            background-color: rgb(158, 157, 157);
+            border-radius: 50%;
+            display: inline-block;
+        }
+        form{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="{{ request.path }}" method="POST" >
+        <span class="{{ led }}"></span>
+        <p>{{ led }}</p>
+        <label for="State"><h3>Control Your LED</h3></label><br>
+        <select name=led>
+            <option value="on">On</option>
+            <option value="off">Off</option>
+            <option>No Change</option>
+        </select>
+        <input type="submit" name="submit" value="Make Change">
+    
+    </form>
+</body>
+</html>

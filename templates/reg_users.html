@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered users</title>
+</head>
+<body>
+    <h3>users are</h3>
+    <table border='1px'>
+        <tr>
+            <th>SR</th>
+            <td>username</td>
+        </tr>
+            {% for sr ,user in users %}
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.username}}</td>
+            </tr>
+            {% endfor %}
+    </table>
+    
+</body>
+</html>
